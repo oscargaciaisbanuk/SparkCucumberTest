@@ -15,7 +15,7 @@ object Hello {
   val sc = new SparkContext(conf)
   val sqlContext = new SQLContext(sc)
 
-  def LoadCSVtoDF(Fichero: String ): DataFrame = {
+  val LoadCSVtoDF = (Fichero: String ) => {
 
     sqlContext.read
       .format("com.databricks.spark.csv")
